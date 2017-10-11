@@ -5,7 +5,8 @@
     <li><i class="fa-li fa fa-user"></i>{{ profile.name }} ({{profile.login}})</li>
     <li><i :class="'fa-li fa fa-'+profile.provider"></i>{{ profile.id }}</li>
     <li v-if="profile.email"><i class="fa-li fa fa-envelope-o"></i>{{ profile.email }}</li>
-    <li v-if="profile.exp"><i class="fa-li fa fa-clock-o"></i>Token valid for next {{ last(profile.exp) }}</li>
+    <li v-if="profile.exp"><i class="fa-li fa fa-clock-o"></i>Token expiret
+       {{ last(profile.exp) }}</li>
     </ul>
   </span>
 </template>
@@ -24,7 +25,7 @@ export default {
   },
   methods: {
     last(t) {
-      return moment.duration(t - (new Date().getTime() / 1000), 'seconds').humanize();
+      return moment.duration(t - (new Date().getTime() / 1000), 'seconds').humanize(true);
     },
   },
   beforeRouteEnter(to, from, next) {

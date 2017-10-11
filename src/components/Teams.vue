@@ -27,7 +27,7 @@ export default {
 };
 </script>
 <style scoped>
-ul li{
+ul li {
   margin-top: 10px;
   margin-bottom: 10px;
 }

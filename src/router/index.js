@@ -3,9 +3,7 @@ import Router from 'vue-router';
 import Table from '@/components/Table';
 import Profile from '@/components/Profile';
 import Users from '@/components/Users';
-import VueBus from 'vue-events';
 
-Vue.use(VueBus);
 Vue.use(Router);
 
 export default new Router({
